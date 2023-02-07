@@ -1,4 +1,3 @@
-use("commerce");
 db.produtos.find({}, {
     nome: 1,
     vendidos: 1,
