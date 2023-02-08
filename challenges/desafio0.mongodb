@@ -1,8 +1,7 @@
-use('commerce')
-db.produtos.find(
-    {ingredientes: {$all: ["picles"]}},
-    {valoresNutricionais: {$slice: 3}, nome: 1, ingredientes: 1, _id: 0}
-)
+
+
+
+
 
 use("commerce")
-db.produtos.find({}, {nome: 1, criadoPor: 1, _id: 0})
+db.produtos.find({})
