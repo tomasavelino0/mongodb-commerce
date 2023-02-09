@@ -2,11 +2,12 @@ use("commerce")
 
 db.produtos.updateMany(
     {},
-    {}
+    {$rename: {descricao: "descricaoSite"}}
 )
 use("commerce")
-db.produtos.find({}, { nome: 1, tags: 1, _id: 0 });
+db.produtos.find({}, { nome: 1, descricaoSite: 1, _id: 0 });
 use("commerce")
 db.produtos.find(
-    {ingredientes: {$size: 4}}
-).count()
+    {},
+    {nome: 1, descricaoSite: 1, _id: 0}
+)
